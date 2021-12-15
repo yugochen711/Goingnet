@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--All ExamineVC-->
+        <scene sceneID="GWD-KK-Lqu">
+            <objects>
+                <viewController storyboardIdentifier="AllExamineVC" id="ZfZ-c8-HuP" customClass="AllExamineVC" customModule="Goingnet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sg6-qH-t3A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RiT-0w-AMg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWY-Kf-Gkk" customClass="MainButton" customModule="Goingnet" customModuleProvider="target">
+                                <rect key="frame" x="354" y="802" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="KXa-9d-Pts"/>
+                                    <constraint firstAttribute="height" constant="45" id="dRv-HJ-aav"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="addButton:" destination="ZfZ-c8-HuP" eventType="touchUpInside" id="ReX-dN-Yh3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X6f-oj-PyL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RiT-0w-AMg" firstAttribute="trailing" secondItem="X6f-oj-PyL" secondAttribute="trailing" id="1U2-l1-10l"/>
+                            <constraint firstItem="RiT-0w-AMg" firstAttribute="top" secondItem="X6f-oj-PyL" secondAttribute="top" id="9xZ-pA-1z7"/>
+                            <constraint firstItem="RiT-0w-AMg" firstAttribute="leading" secondItem="X6f-oj-PyL" secondAttribute="leading" id="AgT-fc-rIk"/>
+                            <constraint firstItem="X6f-oj-PyL" firstAttribute="trailing" secondItem="JWY-Kf-Gkk" secondAttribute="trailing" constant="15" id="Gy5-x6-mrG"/>
+                            <constraint firstItem="X6f-oj-PyL" firstAttribute="bottom" secondItem="JWY-Kf-Gkk" secondAttribute="bottom" constant="15" id="V3Z-k4-Y3M"/>
+                            <constraint firstItem="RiT-0w-AMg" firstAttribute="bottom" secondItem="X6f-oj-PyL" secondAttribute="bottom" id="rFo-Y0-0za"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="add_Btn" destination="JWY-Kf-Gkk" id="gCY-iy-DEz"/>
+                        <outlet property="tableView" destination="RiT-0w-AMg" id="USP-8c-XE7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUo-jF-Pqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228.98550724637684" y="163.39285714285714"/>
+        </scene>
+        <!--All Examine First AddVC-->
+        <scene sceneID="XGh-W1-5HN">
+            <objects>
+                <viewController storyboardIdentifier="AllExamineFirstAddVC" hidesBottomBarWhenPushed="YES" id="arE-gP-7JJ" customClass="AllExamineFirstAddVC" customModule="Goingnet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="01n-DE-s9i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="GST-Xk-88f">
+                                <rect key="frame" x="15" y="74" width="384" height="240"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kce-uA-9Sz" customClass="InputTextFieldPickerView" customModule="Goingnet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="F8x-jL-Ezo"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonType" value="down"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPg-Fv-w5p" customClass="InputTextFieldPickerView" customModule="Goingnet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="384" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="fQb-5N-ehr"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonType" value="down"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOF-tV-xi4" customClass="InputTextFieldPickerView" customModule="Goingnet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180" width="384" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="jwC-JX-aPF"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonType" value="down"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FCd-IG-Q23"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FCd-IG-Q23" firstAttribute="trailing" secondItem="GST-Xk-88f" secondAttribute="trailing" constant="15" id="9SN-yr-HTe"/>
+                            <constraint firstItem="GST-Xk-88f" firstAttribute="top" secondItem="FCd-IG-Q23" secondAttribute="top" constant="30" id="E5M-Xa-MeI"/>
+                            <constraint firstItem="GST-Xk-88f" firstAttribute="leading" secondItem="FCd-IG-Q23" secondAttribute="leading" constant="15" id="UJk-qn-AM3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="input_View" destination="kce-uA-9Sz" collectionClass="NSMutableArray" id="2nD-Lm-zfx"/>
+                        <outletCollection property="input_View" destination="XPg-Fv-w5p" collectionClass="NSMutableArray" id="P7J-az-ehi"/>
+                        <outletCollection property="input_View" destination="lOF-tV-xi4" collectionClass="NSMutableArray" id="oMv-Dj-rPd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkJ-lU-8gs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871" y="163"/>
+        </scene>
+        <!--All Examine Second AddVC-->
+        <scene sceneID="2qH-q1-oJ5">
+            <objects>
+                <viewController storyboardIdentifier="AllExamineSecondAddVC" hidesBottomBarWhenPushed="YES" id="KyW-aY-FWM" customClass="AllExamineSecondAddVC" customModule="Goingnet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qPR-XH-F3Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sM7-Ft-B62">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tq1-WH-pyZ">
+                                        <rect key="frame" x="15" y="30" width="384" height="1062"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dX8-PX-L2m">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="60"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RqP-uU-tbq" customClass="InputTextFieldPickerView" customModule="Goingnet" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="184.5" height="60"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="yDX-XU-6Cl"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonType" value="down"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4iB-ns-vCd" customClass="InputTextFieldPickerView" customModule="Goingnet" customModuleProvider="target">
+                                                        <rect key="frame" x="199.5" y="0.0" width="184.5" height="60"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="cHu-dM-2nX"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonType" value="down"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKA-y4-zdE" customClass="InputTextFieldPickerView" customModule="Goingnet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="90" width="384" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="2cD-9b-eiQ"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonType" value="down"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzw-WH-Jkh" customClass="InputTextView" customModule="Goingnet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="180" width="384" height="120"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="wJl-5T-Gwn"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textViewHeight">
+                                                        <real key="value" value="60"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ddu-MK-coN">
+                                                <rect key="frame" x="0.0" y="330" width="384" height="102"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="102" id="Mio-5Y-MdM"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="frA-Lf-iAk">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ejc-Ol-i4Z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8ZS-2i-zPu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </collectionViewCellContentView>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koj-N7-oDD" customClass="InputTextView" customModule="Goingnet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="462" width="384" height="180"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="jtC-pG-06U"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textViewHeight">
+                                                        <real key="value" value="120"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHo-pt-6Fi" customClass="InputTextView" customModule="Goingnet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="672" width="384" height="180"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="eTO-hj-0a9"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textViewHeight">
+                                                        <real key="value" value="120"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UlV-59-NYz" customClass="InputTextView" customModule="Goingnet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="882" width="384" height="180"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="Sg7-wW-uBy"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="textViewHeight">
+                                                        <real key="value" value="120"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tq1-WH-pyZ" firstAttribute="leading" secondItem="sM7-Ft-B62" secondAttribute="leading" constant="15" id="7Hw-3g-5ao"/>
+                                    <constraint firstItem="tq1-WH-pyZ" firstAttribute="centerX" secondItem="sM7-Ft-B62" secondAttribute="centerX" id="XIu-po-VwZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="tq1-WH-pyZ" secondAttribute="bottom" constant="30" id="aQU-x1-Fzo"/>
+                                    <constraint firstAttribute="trailing" secondItem="tq1-WH-pyZ" secondAttribute="trailing" constant="15" id="nXB-7i-8a1"/>
+                                    <constraint firstItem="tq1-WH-pyZ" firstAttribute="top" secondItem="sM7-Ft-B62" secondAttribute="top" constant="30" id="wlZ-hy-b7u"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LR1-gg-B4f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sM7-Ft-B62" firstAttribute="top" secondItem="LR1-gg-B4f" secondAttribute="top" id="KBZ-aD-gdD"/>
+                            <constraint firstItem="sM7-Ft-B62" firstAttribute="leading" secondItem="LR1-gg-B4f" secondAttribute="leading" id="MU8-7Y-MIO"/>
+                            <constraint firstItem="sM7-Ft-B62" firstAttribute="trailing" secondItem="LR1-gg-B4f" secondAttribute="trailing" id="O5J-QX-vCN"/>
+                            <constraint firstItem="sM7-Ft-B62" firstAttribute="bottom" secondItem="LR1-gg-B4f" secondAttribute="bottom" id="Qgt-tZ-LRY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="building_View" destination="RqP-uU-tbq" id="HPR-gi-S8g"/>
+                        <outlet property="collectionView" destination="ddu-MK-coN" id="OQb-is-B9a"/>
+                        <outlet property="collectionView_HC" destination="Mio-5Y-MdM" id="zMc-nU-Hup"/>
+                        <outlet property="firstDes_View" destination="koj-N7-oDD" id="Oiv-Kg-oIa"/>
+                        <outlet property="floor_View" destination="gKA-y4-zdE" id="MEN-ii-YfK"/>
+                        <outlet property="locaion_View" destination="lzw-WH-Jkh" id="Czd-Bj-o86"/>
+                        <outlet property="secondDes_View" destination="dHo-pt-6Fi" id="I2X-tg-H7u"/>
+                        <outlet property="system_View" destination="4iB-ns-vCd" id="vvb-7s-UFC"/>
+                        <outlet property="thirdDes_View" destination="UlV-59-NYz" id="cBS-3i-SAz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m93-vb-Baq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1502.8985507246377" y="162.72321428571428"/>
+        </scene>
+        <!--Delete And UploadVC-->
+        <scene sceneID="ZSL-WI-EYB">
+            <objects>
+                <viewController storyboardIdentifier="DeleteAndUploadVC" hidesBottomBarWhenPushed="YES" id="75f-PX-s4c" customClass="DeleteAndUploadVC" customModule="Goingnet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BUa-Px-jig">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iN7-ci-utz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5R7-U4-9Ym"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iN7-ci-utz" firstAttribute="leading" secondItem="5R7-U4-9Ym" secondAttribute="leading" id="Dag-m5-nEY"/>
+                            <constraint firstItem="iN7-ci-utz" firstAttribute="bottom" secondItem="5R7-U4-9Ym" secondAttribute="bottom" id="Mno-Z2-q9v"/>
+                            <constraint firstItem="iN7-ci-utz" firstAttribute="trailing" secondItem="5R7-U4-9Ym" secondAttribute="trailing" id="cF0-3C-Q3N"/>
+                            <constraint firstItem="iN7-ci-utz" firstAttribute="top" secondItem="5R7-U4-9Ym" secondAttribute="top" id="knh-u5-Ebo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="iN7-ci-utz" id="Qp2-Me-bjN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfR-t6-mfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2139.130434782609" y="162.72321428571428"/>
+        </scene>
+        <!--All Examine DetailVC-->
+        <scene sceneID="exM-xI-qd4">
+            <objects>
+                <viewController storyboardIdentifier="AllExamineDetailVC" hidesBottomBarWhenPushed="YES" id="GCQ-bi-9Zz" customClass="AllExamineDetailVC" customModule="Goingnet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nIz-pT-ZMm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S5A-wj-4uY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dts-qk-pAI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S5A-wj-4uY" firstAttribute="trailing" secondItem="dts-qk-pAI" secondAttribute="trailing" id="50p-eN-5nF"/>
+                            <constraint firstItem="S5A-wj-4uY" firstAttribute="leading" secondItem="dts-qk-pAI" secondAttribute="leading" id="A8j-d7-5wd"/>
+                            <constraint firstItem="S5A-wj-4uY" firstAttribute="bottom" secondItem="dts-qk-pAI" secondAttribute="bottom" id="bJP-gJ-bdH"/>
+                            <constraint firstItem="S5A-wj-4uY" firstAttribute="top" secondItem="dts-qk-pAI" secondAttribute="top" id="cxZ-pQ-4AY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="S5A-wj-4uY" id="Qst-GJ-vUc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7VO-F7-cVF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762" y="163"/>
+        </scene>
+        <!--All Examine EditVC-->
+        <scene sceneID="D4v-F7-vEh">
+            <objects>
+                <viewController storyboardIdentifier="AllExamineEditVC" hidesBottomBarWhenPushed="YES" id="FY2-fJ-4ea" customClass="AllExamineEditVC" customModule="Goingnet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CXm-Pj-rMx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vh2-mJ-6Mt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9S2-aM-0qs">
+                                        <rect key="frame" x="0.0" y="15" width="414" height="1500"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNf-CA-FE8" customClass="CollapseView" customModule="Goingnet" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="0.0" width="394" height="61"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="61" id="vyh-eQ-9oL"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="sdG-Vz-DdK">
+                                                <rect key="frame" x="15" y="91" width="384" height="930"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6k3-sQ-XEV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="60"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rp6-jC-wTo" customClass="InputTextFieldPickerView" customModule="Goingnet" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="60"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="YTt-Mg-9vB"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonType" value="down"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZt-S1-svi" customClass="InputTextFieldPickerView" customModule="Goingnet" customModuleProvider="target">
+                                                                <rect key="frame" x="199.5" y="0.0" width="184.5" height="60"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="Snd-We-HYc"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonType" value="down"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7RC-i0-sr7" customClass="InputTextFieldPickerView" customModule="Goingnet" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="90" width="384" height="60"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="x9I-u6-FN7"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonType" value="down"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3B-RF-AHM" customClass="InputTextView" customModule="Goingnet" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="180" width="384" height="120"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="Mpd-Ar-oop"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="textViewHeight">
+                                                                <real key="value" value="60"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8t3-PC-7dH" customClass="InputTextView" customModule="Goingnet" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="330" width="384" height="180"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="180" id="Fr1-Se-lCU"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="textViewHeight">
+                                                                <real key="value" value="120"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfq-ET-l5g" customClass="InputTextView" customModule="Goingnet" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="540" width="384" height="180"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="180" id="nv2-yc-QHZ"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="textViewHeight">
+                                                                <real key="value" value="120"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GB5-l0-UTO" customClass="InputTextView" customModule="Goingnet" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="750" width="384" height="180"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="180" id="37J-J3-MrE"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="textViewHeight">
+                                                                <real key="value" value="120"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfA-eR-bZb" customClass="CollapseView" customModule="Goingnet" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="1051" width="394" height="61"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="61" id="hdJ-uq-Ifw"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="jkg-4J-cCE">
+                                                <rect key="frame" x="15" y="1142" width="384" height="358"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vmL-zu-SdW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48O-4G-G2C" customClass="RedButton" customModule="Goingnet" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="oAC-wn-EZt"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="cameraButton:" destination="FY2-fJ-4ea" eventType="touchUpInside" id="oMS-zM-VZU"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te1-SP-9W5" customClass="RedButton" customModule="Goingnet" customModuleProvider="target">
+                                                                <rect key="frame" x="199.5" y="0.0" width="184.5" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="CD1-FM-9fK"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="photoButton:" destination="FY2-fJ-4ea" eventType="touchUpInside" id="uwE-oD-FAF"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kl7-We-qiG">
+                                                        <rect key="frame" x="0.0" y="70" width="384" height="288"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Kl7-We-qiG" secondAttribute="height" multiplier="4:3" id="f3Y-7o-kJL"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="sdG-Vz-DdK" firstAttribute="leading" secondItem="9S2-aM-0qs" secondAttribute="leading" constant="15" id="2YB-CX-6Ii"/>
+                                            <constraint firstItem="PNf-CA-FE8" firstAttribute="leading" secondItem="9S2-aM-0qs" secondAttribute="leading" constant="10" id="9eF-Qe-QOC"/>
+                                            <constraint firstAttribute="trailing" secondItem="XfA-eR-bZb" secondAttribute="trailing" constant="10" id="E9k-di-t7I"/>
+                                            <constraint firstAttribute="trailing" secondItem="PNf-CA-FE8" secondAttribute="trailing" constant="10" id="GPB-Jp-wXM"/>
+                                            <constraint firstItem="XfA-eR-bZb" firstAttribute="leading" secondItem="9S2-aM-0qs" secondAttribute="leading" constant="10" id="RvD-xL-Pv7"/>
+                                            <constraint firstAttribute="trailing" secondItem="jkg-4J-cCE" secondAttribute="trailing" constant="15" id="UB1-Al-znt"/>
+                                            <constraint firstAttribute="trailing" secondItem="sdG-Vz-DdK" secondAttribute="trailing" constant="15" id="lth-5E-Ydm"/>
+                                            <constraint firstItem="jkg-4J-cCE" firstAttribute="leading" secondItem="9S2-aM-0qs" secondAttribute="leading" constant="15" id="teU-Da-ZZY"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9S2-aM-0qs" secondAttribute="trailing" id="C5j-2U-jGN"/>
+                                    <constraint firstItem="9S2-aM-0qs" firstAttribute="leading" secondItem="Vh2-mJ-6Mt" secondAttribute="leading" id="LAq-eC-jS6"/>
+                                    <constraint firstItem="9S2-aM-0qs" firstAttribute="top" secondItem="Vh2-mJ-6Mt" secondAttribute="top" constant="15" id="WgV-GG-BSu"/>
+                                    <constraint firstItem="9S2-aM-0qs" firstAttribute="centerX" secondItem="Vh2-mJ-6Mt" secondAttribute="centerX" id="cCu-ha-lAL"/>
+                                    <constraint firstAttribute="bottom" secondItem="9S2-aM-0qs" secondAttribute="bottom" constant="30" id="wlD-0a-MF7"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ile-bn-MJB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vh2-mJ-6Mt" firstAttribute="top" secondItem="ile-bn-MJB" secondAttribute="top" id="8k5-cB-LXp"/>
+                            <constraint firstItem="Vh2-mJ-6Mt" firstAttribute="trailing" secondItem="ile-bn-MJB" secondAttribute="trailing" id="SOF-pS-WGh"/>
+                            <constraint firstItem="Vh2-mJ-6Mt" firstAttribute="bottom" secondItem="ile-bn-MJB" secondAttribute="bottom" id="k2e-Py-hpc"/>
+                            <constraint firstItem="Vh2-mJ-6Mt" firstAttribute="leading" secondItem="ile-bn-MJB" secondAttribute="leading" id="xaJ-xG-frQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="building_View" destination="rp6-jC-wTo" id="U1a-9g-6e8"/>
+                        <outlet property="camera_Btn" destination="48O-4G-G2C" id="QpY-1o-wmI"/>
+                        <outlet property="firstCollapse_View" destination="PNf-CA-FE8" id="zTE-pP-6kH"/>
+                        <outlet property="firstDes_View" destination="8t3-PC-7dH" id="1xI-5c-3Sv"/>
+                        <outlet property="first_stackView" destination="sdG-Vz-DdK" id="UFc-h0-A3U"/>
+                        <outlet property="floor_View" destination="7RC-i0-sr7" id="ort-rX-2I0"/>
+                        <outlet property="locaion_View" destination="Z3B-RF-AHM" id="vG3-cp-7fY"/>
+                        <outlet property="photo_Btn" destination="te1-SP-9W5" id="bD0-Xl-6jn"/>
+                        <outlet property="photo_imgView" destination="Kl7-We-qiG" id="yTN-DD-QCY"/>
+                        <outlet property="secondCollapse_View" destination="XfA-eR-bZb" id="zLu-ih-cul"/>
+                        <outlet property="secondDes_View" destination="mfq-ET-l5g" id="6VQ-jT-r91"/>
+                        <outlet property="second_stackView" destination="jkg-4J-cCE" id="IVM-M7-Lw0"/>
+                        <outlet property="system_View" destination="LZt-S1-svi" id="ZIv-EF-HWQ"/>
+                        <outlet property="thirdDes_View" destination="GB5-l0-UTO" id="vEf-ta-qfG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEr-3h-NX6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3401" y="163"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

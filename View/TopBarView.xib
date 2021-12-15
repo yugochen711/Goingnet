@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopBarView" customModule="Goingnet" customModuleProvider="target">
+            <connections>
+                <outlet property="left_Btn" destination="acB-yW-Non" id="eRL-ka-Ff6"/>
+                <outlet property="left_View" destination="m6o-F8-5HH" id="Yxt-rI-Pcw"/>
+                <outlet property="right_Btn" destination="icw-LS-IDX" id="sJI-B8-SMg"/>
+                <outlet property="right_View" destination="b2i-HQ-Yft" id="TZo-gM-0cu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PtR-Re-614">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="39E-WT-Qb4">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="W2D-aJ-Mil">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="49"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acB-yW-Non">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="45"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="leftButton:" destination="-1" eventType="touchUpInside" id="9Sr-ch-jG4"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6o-F8-5HH">
+                                            <rect key="frame" x="0.0" y="45" width="207" height="4"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="4" id="Vek-ci-Uzo"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JE9-DA-R18">
+                                    <rect key="frame" x="207" y="0.0" width="207" height="49"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icw-LS-IDX">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="45"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="rightButton:" destination="-1" eventType="touchUpInside" id="VuK-kZ-oC4"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2i-HQ-Yft">
+                                            <rect key="frame" x="0.0" y="45" width="207" height="4"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="4" id="wVt-ar-bQm"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Nq-pf-UaD" customClass="GaryLineView" customModule="Goingnet" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="49" width="414" height="1"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="DTW-Ym-CgB"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="4Nq-pf-UaD" secondAttribute="trailing" id="tpQ-EY-ctk"/>
+                        <constraint firstItem="4Nq-pf-UaD" firstAttribute="leading" secondItem="PtR-Re-614" secondAttribute="leading" id="xqn-Zh-RJF"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PtR-Re-614" secondAttribute="bottom" id="TBX-1h-B3G"/>
+                <constraint firstAttribute="trailing" secondItem="PtR-Re-614" secondAttribute="trailing" id="aaQ-vt-1Y8"/>
+                <constraint firstItem="PtR-Re-614" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ecA-lJ-1Ds"/>
+                <constraint firstItem="PtR-Re-614" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ocd-Zw-MHg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="141" y="134"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
