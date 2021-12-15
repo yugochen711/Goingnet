@@ -19,7 +19,7 @@ class MaintainUploadVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("新的分支")
+        print("新的分支.......")
         layout()
     }
     private func layout() {
